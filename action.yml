@@ -18,6 +18,10 @@ inputs:
   ref:
     description: "A git ref to be checked: branch/tag/commit sha"
     required: true
+  repo:
+    description: "Target repository"
+    required: false
+    default: ${{ env.GITHUB_REPOSITORY }}
   repo-token:
     description: "A GitHub token for the repo"
     required: false
@@ -73,6 +77,7 @@ runs:
         WAIT_INTERVAL: ${{ inputs.wait-interval }}
         RUNNING_WORKFLOW_NAME: ${{ inputs.running-workflow-name }}
         API_ENDPOINT: ${{ inputs.api-endpoint }}
+        GITHUB_REPOSITORY: ${{ inputs.repo }}
 branding:
   icon: "check-circle"
   color: "green"
