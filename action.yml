@@ -77,7 +77,7 @@ runs:
         WAIT_INTERVAL: ${{ inputs.wait-interval }}
         RUNNING_WORKFLOW_NAME: ${{ inputs.running-workflow-name }}
         API_ENDPOINT: ${{ inputs.api-endpoint }}
-        GITHUB_REPOSITORY: ${{ inputs.repo }}
+        REPO: ${{ inputs.repo }}
 branding:
   icon: "check-circle"
   color: "green"
