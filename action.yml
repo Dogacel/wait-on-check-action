@@ -21,7 +21,7 @@ inputs:
   repo:
     description: "Target repository"
     required: false
-    default: ${{ env.GITHUB_REPOSITORY }}
+    default: ${{ github.repository }}
   repo-token:
     description: "A GitHub token for the repo"
     required: false
